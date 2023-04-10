@@ -1,0 +1,294 @@
+2023-04-06T07:32:25Z	INFO	controller-runtime.metrics	Metrics server is starting to listen	{"addr": ":8080"}
+2023-04-06T07:32:25Z	INFO	setup	starting manager
+2023-04-06T07:32:25Z	INFO	Starting server	{"path": "/metrics", "kind": "metrics", "addr": "[::]:8080"}
+2023-04-06T07:32:25Z	INFO	Starting server	{"kind": "health probe", "addr": "[::]:8081"}
+I0406 07:32:25.486580       1 leaderelection.go:248] attempting to acquire leader lease ocm-system/f8b21459.ocm.software...
+I0406 07:32:25.496194       1 leaderelection.go:258] successfully acquired lease ocm-system/f8b21459.ocm.software
+2023-04-06T07:32:25Z	DEBUG	events	ocm-controller-f9c8dd4b7-mqkw9_e00256c2-1967-463d-91c3-b332d03a3523 became leader	{"type": "Normal", "object": {"kind":"Lease","namespace":"ocm-system","name":"f8b21459.ocm.software","uid":"0c9cae2c-1ff4-457b-9b27-1ea4199d3d59","apiVersion":"coordination.k8s.io/v1","resourceVersion":"21035"}, "reason": "LeaderElection"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "source": "kind source: *v1alpha1.ComponentVersion"}
+2023-04-06T07:32:25Z	INFO	Starting Controller	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "configuration", "controllerGroup": "delivery.ocm.software", "controllerKind": "Configuration", "source": "kind source: *v1alpha1.Configuration"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "configuration", "controllerGroup": "delivery.ocm.software", "controllerKind": "Configuration", "source": "kind source: *v1alpha1.Snapshot"}
+2023-04-06T07:32:25Z	INFO	Starting Controller	{"controller": "configuration", "controllerGroup": "delivery.ocm.software", "controllerKind": "Configuration"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "snapshot", "controllerGroup": "delivery.ocm.software", "controllerKind": "Snapshot", "source": "kind source: *v1alpha1.Snapshot"}
+2023-04-06T07:32:25Z	INFO	Starting Controller	{"controller": "snapshot", "controllerGroup": "delivery.ocm.software", "controllerKind": "Snapshot"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "resource", "controllerGroup": "delivery.ocm.software", "controllerKind": "Resource", "source": "kind source: *v1alpha1.Resource"}
+2023-04-06T07:32:25Z	INFO	Starting Controller	{"controller": "resource", "controllerGroup": "delivery.ocm.software", "controllerKind": "Resource"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "localization", "controllerGroup": "delivery.ocm.software", "controllerKind": "Localization", "source": "kind source: *v1alpha1.Localization"}
+2023-04-06T07:32:25Z	INFO	Starting EventSource	{"controller": "localization", "controllerGroup": "delivery.ocm.software", "controllerKind": "Localization", "source": "kind source: *v1alpha1.Snapshot"}
+2023-04-06T07:32:25Z	INFO	Starting Controller	{"controller": "localization", "controllerGroup": "delivery.ocm.software", "controllerKind": "Localization"}
+2023-04-06T07:32:25Z	INFO	Starting workers	{"controller": "configuration", "controllerGroup": "delivery.ocm.software", "controllerKind": "Configuration", "worker count": 1}
+2023-04-06T07:32:25Z	INFO	Starting workers	{"controller": "localization", "controllerGroup": "delivery.ocm.software", "controllerKind": "Localization", "worker count": 1}
+2023-04-06T07:32:25Z	INFO	Starting workers	{"controller": "snapshot", "controllerGroup": "delivery.ocm.software", "controllerKind": "Snapshot", "worker count": 1}
+2023-04-06T07:32:25Z	INFO	Starting workers	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "worker count": 1}
+2023-04-06T07:32:25Z	INFO	Starting workers	{"controller": "resource", "controllerGroup": "delivery.ocm.software", "controllerKind": "Resource", "worker count": 1}
+2023-04-06T07:32:25Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "379e361e-8f64-4b5d-8587-ad8308d37c82"}
+2023-04-06T07:32:25Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "379e361e-8f64-4b5d-8587-ad8308d37c82", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T07:32:27Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "379e361e-8f64-4b5d-8587-ad8308d37c82", "version": "v1.0.2"}
+2023-04-06T07:32:27Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "379e361e-8f64-4b5d-8587-ad8308d37c82", "reconciled": "0.0.0"}
+2023-04-06T07:32:27Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T07:32:27Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "379e361e-8f64-4b5d-8587-ad8308d37c82"}
+2023-04-06T07:32:27Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"5391"}, "reason": "info"}
+2023-04-06T07:32:33Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "379e361e-8f64-4b5d-8587-ad8308d37c82", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: public key not found"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:32:33Z	ERROR	failed to verify component: verify error: public key not found, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:32:33Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T07:32:33Z	DEBUG	events	failed to verify component: verify error: public key not found, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"5391"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:32:33Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"5391"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:32:33Z	INFO	KubeAPIWarningLogger	unknown field "status.conditions"
+2023-04-06T07:32:33Z	INFO	KubeAPIWarningLogger	unknown field "status.observedGeneration"
+2023-04-06T07:38:08Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "bb394843-58d7-4b48-98d0-9f4a87fc9a1b"}
+2023-04-06T07:38:08Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "bb394843-58d7-4b48-98d0-9f4a87fc9a1b", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T07:38:10Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "bb394843-58d7-4b48-98d0-9f4a87fc9a1b", "version": "v1.0.2"}
+2023-04-06T07:38:10Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "bb394843-58d7-4b48-98d0-9f4a87fc9a1b", "reconciled": "0.0.0"}
+2023-04-06T07:38:10Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T07:38:10Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "bb394843-58d7-4b48-98d0-9f4a87fc9a1b"}
+2023-04-06T07:38:10Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"22148"}, "reason": "info"}
+2023-04-06T07:38:17Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "bb394843-58d7-4b48-98d0-9f4a87fc9a1b", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: Secret \"publickey\" not found"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:38:17Z	ERROR	failed to verify component: verify error: Secret "publickey" not found, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:38:17Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T07:38:17Z	DEBUG	events	failed to verify component: verify error: Secret "publickey" not found, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"22148"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:38:17Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"22148"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:42:08Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "b80def0c-1ee7-421c-93d8-d78ba7b9ffe3"}
+2023-04-06T07:42:08Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "b80def0c-1ee7-421c-93d8-d78ba7b9ffe3", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T07:42:10Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "b80def0c-1ee7-421c-93d8-d78ba7b9ffe3", "version": "v1.0.2"}
+2023-04-06T07:42:10Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "b80def0c-1ee7-421c-93d8-d78ba7b9ffe3", "reconciled": "0.0.0"}
+2023-04-06T07:42:10Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T07:42:10Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "b80def0c-1ee7-421c-93d8-d78ba7b9ffe3"}
+2023-04-06T07:42:10Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"22931"}, "reason": "info"}
+2023-04-06T07:42:16Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "b80def0c-1ee7-421c-93d8-d78ba7b9ffe3", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: github.com/sidhishruti22/podify:v1.0.2: signature \"alice\" not found"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:42:16Z	ERROR	failed to verify component: verify error: github.com/sidhishruti22/podify:v1.0.2: signature "alice" not found, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:42:16Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T07:42:16Z	DEBUG	events	failed to verify component: verify error: github.com/sidhishruti22/podify:v1.0.2: signature "alice" not found, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"22931"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:42:16Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"22931"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:44:58Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "e5f4ae55-fcc5-4c5a-93d9-baa13711623c"}
+2023-04-06T07:44:58Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "e5f4ae55-fcc5-4c5a-93d9-baa13711623c", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T07:45:00Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "e5f4ae55-fcc5-4c5a-93d9-baa13711623c", "version": "v1.0.2"}
+2023-04-06T07:45:00Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "e5f4ae55-fcc5-4c5a-93d9-baa13711623c", "reconciled": "0.0.0"}
+2023-04-06T07:45:00Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T07:45:00Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "e5f4ae55-fcc5-4c5a-93d9-baa13711623c"}
+2023-04-06T07:45:00Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"23493"}, "reason": "info"}
+2023-04-06T07:45:06Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "e5f4ae55-fcc5-4c5a-93d9-baa13711623c", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: public key not found"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:45:06Z	ERROR	failed to verify component: verify error: public key not found, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:45:06Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T07:45:06Z	DEBUG	events	failed to verify component: verify error: public key not found, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"23493"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:45:06Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"23493"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:48:59Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "883298c8-8a09-4ca0-80fa-57a20436da99"}
+2023-04-06T07:48:59Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "883298c8-8a09-4ca0-80fa-57a20436da99", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T07:49:01Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "883298c8-8a09-4ca0-80fa-57a20436da99", "version": "v1.0.2"}
+2023-04-06T07:49:01Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "883298c8-8a09-4ca0-80fa-57a20436da99", "reconciled": "0.0.0"}
+2023-04-06T07:49:01Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T07:49:01Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "883298c8-8a09-4ca0-80fa-57a20436da99"}
+2023-04-06T07:49:01Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"24279"}, "reason": "info"}
+2023-04-06T07:49:06Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "883298c8-8a09-4ca0-80fa-57a20436da99", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: public key not found"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:49:06Z	ERROR	failed to verify component: verify error: public key not found, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:49:06Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T07:49:06Z	DEBUG	events	failed to verify component: verify error: public key not found, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"24279"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:49:06Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"24279"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:55:59Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "934970d7-895e-4ce4-adec-0e580940da5e"}
+2023-04-06T07:55:59Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "934970d7-895e-4ce4-adec-0e580940da5e", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T07:56:01Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "934970d7-895e-4ce4-adec-0e580940da5e", "version": "v1.0.2"}
+2023-04-06T07:56:01Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "934970d7-895e-4ce4-adec-0e580940da5e", "reconciled": "0.0.0"}
+2023-04-06T07:56:01Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T07:56:01Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "934970d7-895e-4ce4-adec-0e580940da5e"}
+2023-04-06T07:56:01Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"25625"}, "reason": "info"}
+2023-04-06T07:56:07Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "934970d7-895e-4ce4-adec-0e580940da5e", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: github.com/sidhishruti22/podify:v1.0.2: signature \"key\" not found"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:56:07Z	ERROR	failed to verify component: verify error: github.com/sidhishruti22/podify:v1.0.2: signature "key" not found, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T07:56:07Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T07:56:07Z	DEBUG	events	failed to verify component: verify error: github.com/sidhishruti22/podify:v1.0.2: signature "key" not found, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"25625"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T07:56:07Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"25625"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T08:08:00Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "16a3c77a-ba7b-4474-bf36-38671c6ac732"}
+2023-04-06T08:08:00Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "16a3c77a-ba7b-4474-bf36-38671c6ac732", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T08:08:03Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "16a3c77a-ba7b-4474-bf36-38671c6ac732", "version": "v1.0.2"}
+2023-04-06T08:08:03Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "16a3c77a-ba7b-4474-bf36-38671c6ac732", "reconciled": "0.0.0"}
+2023-04-06T08:08:03Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T08:08:03Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "16a3c77a-ba7b-4474-bf36-38671c6ac732"}
+2023-04-06T08:08:03Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"27943"}, "reason": "info"}
+2023-04-06T08:08:44Z	ERROR	ocm-component-version-reconcile	failed to verify component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "16a3c77a-ba7b-4474-bf36-38671c6ac732", "component": {"name":"podify","namespace":"ocm-system"}, "error": "verify error: github.com/sidhishruti22/podify:v1.0.2: signature \"RSASSA-PKCS1-V1_5\" is invalid: signature verification failed, crypto/rsa: verification error"}
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:177
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T08:08:44Z	ERROR	failed to verify component: verify error: github.com/sidhishruti22/podify:v1.0.2: signature "RSASSA-PKCS1-V1_5" is invalid: signature verification failed, crypto/rsa: verification error, retrying in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "annotations": {}, "error": "ComponentVerificationFailed"}
+github.com/fluxcd/pkg/runtime/events.(*Recorder).AnnotatedEventf
+	/home/runner/go/pkg/mod/github.com/fluxcd/pkg/runtime@v0.27.0/events/recorder.go:137
+github.com/open-component-model/ocm-controller/pkg/event.New
+	/home/runner/work/ocm-controller/ocm-controller/pkg/event/event.go:27
+github.com/open-component-model/ocm-controller/controllers.(*ComponentVersionReconciler).Reconcile
+	/home/runner/work/ocm-controller/ocm-controller/controllers/componentversion_controller.go:181
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.1/pkg/internal/controller/controller.go:235
+2023-04-06T08:08:44Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "ComponentVerificationFailed", "annotations": {"delivery.ocm.software/component_version":":"}}
+2023-04-06T08:08:44Z	DEBUG	events	failed to verify component: verify error: github.com/sidhishruti22/podify:v1.0.2: signature "RSASSA-PKCS1-V1_5" is invalid: signature verification failed, crypto/rsa: verification error, retrying in 10m0s	{"type": "Warning", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"27943"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T08:08:44Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"27943"}, "reason": "ComponentVerificationFailed"}
+2023-04-06T08:39:45Z	INFO	ocm-component-version-reconcile	starting ocm component loop	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9"}
+2023-04-06T08:39:45Z	LEVEL(-4)	ocm-component-version-reconcile	found component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "component": {"apiVersion": "delivery.ocm.software/v1alpha1", "kind": "ComponentVersion", "namespace": "ocm-system", "name": "podify"}}
+2023-04-06T08:39:48Z	LEVEL(-4)	ocm-component-version-reconcile	got latest version of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "version": "v1.0.2"}
+2023-04-06T08:39:48Z	LEVEL(-4)	ocm-component-version-reconcile	current reconciled version is	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "reconciled": "0.0.0"}
+2023-04-06T08:39:48Z	INFO	Version check succeeded, found latest version: v1.0.2	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "info", "annotations": {}}
+2023-04-06T08:39:48Z	INFO	ocm-component-version-reconcile	running verification of component	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9"}
+2023-04-06T08:39:48Z	DEBUG	events	Version check succeeded, found latest version: v1.0.2	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"33980"}, "reason": "info"}
+2023-04-06T08:40:29Z	INFO	component verified	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "signature": "key"}
+2023-04-06T08:40:41Z	LEVEL(-4)	created(ed) descriptor	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "descriptor": {"name":"github.com-sidhishruti22-backend-v1.0.2-6945349915576410026","namespace":"ocm-system"}}
+2023-04-06T08:40:47Z	LEVEL(-4)	created(ed) descriptor	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "descriptor": {"name":"github.com-sidhishruti22-frontend-v1.0.1-6261307342801445717","namespace":"ocm-system"}}
+2023-04-06T08:40:52Z	LEVEL(-4)	created(ed) descriptor	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9", "descriptor": {"name":"github.com-sidhishruti22-cache-v1.0.0-2915504542667053844","namespace":"ocm-system"}}
+2023-04-06T08:40:52Z	INFO	ocm-component-version-reconcile	reconciliation complete	{"controller": "componentversion", "controllerGroup": "delivery.ocm.software", "controllerKind": "ComponentVersion", "ComponentVersion": {"name":"podify","namespace":"ocm-system"}, "namespace": "ocm-system", "name": "podify", "reconcileID": "d125505f-64ad-417e-9794-a08a381bd1f9"}
+2023-04-06T08:40:52Z	INFO	Reconciliation succeeded	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "Succeeded", "annotations": {}}
+2023-04-06T08:40:52Z	INFO	Reconciliation finished, next run in 10m0s	{"name": "podify", "namespace": "ocm-system", "reconciler kind": "ComponentVersion", "reason": "Succeeded", "annotations": {"delivery.ocm.software/component_version":"github.com/sidhishruti22/podify:v1.0.2"}}
+2023-04-06T08:40:52Z	DEBUG	events	Reconciliation succeeded	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"33980"}, "reason": "Succeeded"}
+2023-04-06T08:40:52Z	DEBUG	events	Reconciliation finished, next run in 10m0s	{"type": "Normal", "object": {"kind":"ComponentVersion","namespace":"ocm-system","name":"podify","uid":"27d7e2dc-3a50-4c1b-bd7d-210d852bd349","apiVersion":"delivery.ocm.software/v1alpha1","resourceVersion":"33980"}, "reason": "Succeeded"}
