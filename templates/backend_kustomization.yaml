@@ -1,0 +1,15 @@
+- name: flux-kustomization
+  template:
+    apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+    kind: Kustomization
+    metadata:
+      name: backend-manifests
+      namespace: flux-system
+    spec:
+      interval: 1m0s
+      prune: true
+      targetNamespace: default
+      sourceRef:
+        kind: OCIRepository
+        name: backend-manifests
+      path: ./
