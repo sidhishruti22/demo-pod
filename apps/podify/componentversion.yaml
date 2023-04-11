@@ -14,4 +14,9 @@ spec:
       name: creds
   references:
     expand: true
+  verify:
+  - name: key
+    publicKey:
+      secretRef:
+        name: publickey  
 
