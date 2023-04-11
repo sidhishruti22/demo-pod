@@ -85,7 +85,7 @@ steps:
     kind: Kustomization
     metadata:
       name: {{ .Parameters.Name }}
-      namespace: flux-system
+      namespace: ocm-system
     spec:
       interval: 1m0s
       prune: true
