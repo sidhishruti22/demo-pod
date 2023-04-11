@@ -93,4 +93,5 @@ steps:
       sourceRef:
         kind: OCIRepository
         name: {{ .Parameters.Name }}
+        namespace: ocm-system
       path: ./
