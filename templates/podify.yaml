@@ -50,7 +50,6 @@ steps:
             {{ end }}
       snapshotTemplate:
          name: {{ .Parameters.Name }}-localized
-         - tag: latest
 - name: config
   template:
     apiVersion: delivery.ocm.software/v1alpha1
