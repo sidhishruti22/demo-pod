@@ -92,6 +92,5 @@ steps:
       targetNamespace: default
       sourceRef:
         kind: OCIRepository
-        name: {{ .Parameters.Name }}
-        namespace: ocm-system
+        name: {{ .Parameters.Name }}-configured
       path: ./
