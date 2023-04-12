@@ -85,7 +85,7 @@ steps:
     kind: Kustomization
     metadata:
       name: {{ .Parameters.Name }}
-      namespace: ocm-system
+      namespace: {{ .Component.Namespace }}
     spec:
       interval: 1m0s
       prune: true
