@@ -4,7 +4,7 @@ metadata:
   name: github.com/sidhishruti22/podify
   provider:
     name: sidhishruti22
-  version: v1.0.2
+  version: v1.0.3
 repositoryContexts: []
 spec:
   references:
