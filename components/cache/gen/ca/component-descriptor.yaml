@@ -17,7 +17,7 @@ spec:
     type: configdata.ocm.software
     version: v1.0.1
   - access:
-      imageReference: redis:6.0.1
+      imageReference: redis:6.0.4
       type: ociArtifact
     name: image
     relation: external

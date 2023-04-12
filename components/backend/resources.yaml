@@ -12,7 +12,7 @@ type: ociImage
 version: 6.2.0
 access:
   type: ociArtifact
-  imageReference: ghcr.io/stefanprodan/podinfo:6.2.0
+  imageReference: ghcr.io/stefanprodan/podinfo:6.3.3
 ---
 name: manifests
 type: kustomize.ocm.fluxcd.io

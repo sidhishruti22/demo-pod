@@ -17,14 +17,14 @@ spec:
     type: configdata.ocm.software
     version: v1.0.3
   - access:
-      imageReference: ghcr.io/stefanprodan/podinfo:6.2.0
+      imageReference: ghcr.io/stefanprodan/podinfo:6.3.3
       type: ociArtifact
     name: image
     relation: external
     type: ociImage
     version: 6.2.0
   - access:
-      localReference: sha256.b8d82edcaf30b515bc0997753a456e0e97eb20d09b18c439cbd384ac6db196fa
+      localReference: sha256.bcc609cbabdc0b5122b0646ceef0503bf6a307e16ccb6f308e067c3405b7fb45
       mediaType: application/x-tgz
       type: localBlob
     name: manifests

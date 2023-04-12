@@ -12,7 +12,7 @@ type: ociImage
 version: 6.2.0
 access:
   type: ociArtifact
-  imageReference: redis:6.0.1
+  imageReference: redis:6.0.4
 ---
 name: manifests
 type: kustomize.ocm.fluxcd.io
