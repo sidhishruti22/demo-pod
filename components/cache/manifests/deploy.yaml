@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: redis
-          image: redis:6.0.1
+          image: redis:6.0.4
           imagePullPolicy: IfNotPresent
           command:
             - redis-server
