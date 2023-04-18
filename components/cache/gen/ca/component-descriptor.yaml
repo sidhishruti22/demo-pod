@@ -22,7 +22,7 @@ spec:
     name: image
     relation: external
     type: ociImage
-    version: 6.2.0
+    version: 6.2.1
   - access:
       localReference: sha256.9c04e4c911b3bec7b746f0ffcf39099457c8568c68948c8424f9a95fe3c2f898
       mediaType: application/x-tgz
