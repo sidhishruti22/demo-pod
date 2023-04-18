@@ -14,9 +14,4 @@ spec:
       name: acreds
   references:
     expand: true
-  verify:
-  - name: key
-    publicKey:
-      secretRef:
-        name: publickey  
-
+  
