@@ -7,11 +7,11 @@ spec:
   interval: 10m0s
   component: github.com/sidhishruti22/podify
   version:
-    semver: v1.0.3
+    semver: ">=v1.0.1"
   repository:
-    url: ghcr.io/sidhishruti22
+    url: artefact-transfer-test.int.repositories.cloud.sap
     secretRef:
-      name: creds
+      name: acreds
   references:
     expand: true
   verify:
