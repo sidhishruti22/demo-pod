@@ -7,7 +7,7 @@ spec:
   interval: 10m0s
   component: github.com/sidhishruti22/podify
   version:
-    semver: =v1.0.2
+    semver: v1.0.2
   repository:
     url: dcom-test.int.repositories.cloud.sap
     secretRef:
