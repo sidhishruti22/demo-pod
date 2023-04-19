@@ -9,9 +9,9 @@ spec:
   version:
     semver: "=>v1.0.2"
   repository:
-    url: https://int.repositories.cloud.sap/artifactory/dcom-test/component-descriptors/github.com/sidhishruti22/
+    url: github.com/sidhishruti22/ 
     secretRef:
-      name: acreds
+      name: creds
   references:
     expand: true
   
