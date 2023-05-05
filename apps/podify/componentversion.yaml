@@ -8,6 +8,7 @@ spec:
   component: github.com/sidhishruti22/podify
   version:
     semver: v1.0.3
+    allowRollback: true
   repository:
     url: ghcr.io/sidhishruti22
     secretRef:
