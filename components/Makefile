@@ -28,9 +28,7 @@ $1/push: $1/ca
 
 $1/clean:
 	rm -rf $1/gen
-
-.PHONY: create
-create: kind create cluster --name kind-dcom-3   	
+ 	
 
 endef
 
