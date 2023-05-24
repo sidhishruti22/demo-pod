@@ -10,9 +10,9 @@ spec:
     semver: v1.0.5
     allowRollback: true
   repository:
-    url: ghcr.io/sidhishruti22
+    url: dcom-demo.int.repositories.cloud.sap
     secretRef:
-      name: creds
+      name: acreds
   references:
     expand: true
   
