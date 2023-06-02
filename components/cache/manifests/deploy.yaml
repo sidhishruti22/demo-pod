@@ -15,8 +15,6 @@ spec:
         - name: redis
           image: redis:6.0.4
           imagePullPolicy: IfNotPresent
-          imagePullSecrets:
-           - name: aregcred
           command:
             - redis-server
             - "/redis-master/redis.conf"
